@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thiệp mời tốt nghiệp</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://i.postimg.cc/qvjz8QFW/Logo.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <!-- Hoa rơi nền -->
+    <div class="flowers-container" id="flowersContainer"></div>
+
+    <div class="card">
+      <!-- ===== SECTION 1: HEADER ===== -->
+      <section class="sec-header fade-up">
+        <img src="./style/img/flower (2).png" alt="" class="floral-top-img" />
+
+        <div class="header-body">
+          <p class="lbl-invite">THƯ MỜI THAM DỰ</p>
+          <p class="lbl-event">LỄ TỐT NGHIỆP CỦA</p>
+          <h1 class="grad-name" id="js-ten-nguoi"></h1>
+          <p class="lbl-greet">HÂN HẠNH MỜI</p>
+          <p class="lbl-you">BẠN THÂN MẾN</p>
+        </div>
+
+        <div class="divider">
+          <span class="divider-line"></span>
+          <span class="divider-diamond">◆</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <div class="event-info">
+          <p class="event-datetime" id="js-event-datetime"></p>
+          <p class="event-addr" id="js-event-addr"></p>
+        </div>
+
+        <div class="illustrations">
+          <img
+            src="./style/img/flower (2).png"
+            alt=""
+            class="illus-flower-bg"
+          />
+          <img
+            src="./style/img/paper.png"
+            alt="cuộn bằng"
+            class="illus-scroll scroll-l"
+          />
+          <img
+            src="./style/img/girl (1).png"
+            alt="tân cử nhân"
+            class="illus-grad"
+          />
+          <img
+            src="./style/img/paper.png"
+            alt="cuộn bằng"
+            class="illus-scroll scroll-r"
+          />
+        </div>
+      </section>
+
+      <!-- ===== SECTION 2: LỊCH ===== -->
+      <section class="sec-calendar fade-up">
+        <div class="calendar" id="calendar"></div>
+      </section>
+
+      <!-- ===== SECTION 3: COUNTDOWN ===== -->
+      <section class="sec-countdown fade-up">
+        <p class="sec-label">CÙNG ĐẾM NGƯỢC THỜI GIAN</p>
+        <div class="countdown-wrap">
+          <div class="cd-box">
+            <span class="cd-num" id="cd-days">00</span
+            ><span class="cd-lbl">Ngày</span>
+          </div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box">
+            <span class="cd-num" id="cd-hours">00</span
+            ><span class="cd-lbl">Giờ</span>
+          </div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box">
+            <span class="cd-num" id="cd-mins">00</span
+            ><span class="cd-lbl">Phút</span>
+          </div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box">
+            <span class="cd-num" id="cd-secs">00</span
+            ><span class="cd-lbl">Giây</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SECTION 4: BẢN ĐỒ ===== -->
+      <section class="sec-map fade-up">
+        <p class="sec-label">XEM DẪN ĐƯỜNG</p>
+        <div class="map-frame">
+          <iframe
+            id="js-map-iframe"
+            src=""
+            width="100%"
+            height="240"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Bản đồ địa điểm"
+          ></iframe>
+        </div>
+        <a
+          id="js-map-link"
+          class="btn btn-map"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+        </a>
+      </section>
+
+      <!-- ===== SECTION 5: RSVP ===== -->
+      <section class="sec-rsvp fade-up">
+        <p class="sec-title-script">Lời nhắn nhủ</p>
+        <form id="rsvpForm" class="rsvp-form" novalidate>
+          <input
+            id="f-name"
+            type="text"
+            class="f-input"
+            placeholder="Tên của bạn là gì?"
+            required
+          />
+          <textarea
+            id="f-wish"
+            class="f-input f-textarea"
+            placeholder="Gửi lời chúc đến mình nhé"
+            rows="4"
+          ></textarea>
+          <button type="submit" class="btn btn-submit">GỬI LỜI CHÚC</button>
+        </form>
+      </section>
+
+      <!-- ===== SECTION 6: LỜI CHÚC ===== -->
+      <section class="sec-wishes fade-up">
+        <p class="sec-label">XEM LỜI CHÚC CỦA MỌI NGƯỜI</p>
+        <div class="wishes-box" id="wishesBox"></div>
+      </section>
+
+      <!-- ===== FOOTER ===== -->
+      <footer class="footer fade-up">
+        <p class="footer-title">- Cảm Ơn -</p>
+        <p class="footer-text">
+          Ngày hôm nay không chỉ là cột mốc của riêng em/con/mình,<br />mà còn
+          là thành quả của sự yêu thương và động viên từ mọi người.<br />
+          Sự hiện diện của thầy cô, bạn bè và anh chị sẽ là niềm vui lớn trong
+          ngày đặc biệt này.
+        </p>
+      </footer>
+    </div>
+
+    <button class="music-fab" id="musicFab" title="Nhạc nền">
+      <img src="./style/sound/disc (1).png" alt="nhạc" id="fabDisc" />
+    </button>
+
+    <div class="music-modal-overlay" id="musicModal">
+      <div class="music-modal-box">
+        <button class="modal-close-btn" id="modalClose">✕</button>
+        <img
+          src="./style/sound/disc (1).png"
+          alt="disc"
+          class="modal-disc-img"
+          id="modalDisc"
+        />
+        <p class="modal-song-title" id="modalSongTitle"></p>
+        <div class="progress-row">
+          <span class="time-label" id="timeCur">0:00</span>
+          <input
+            type="range"
+            class="prog-bar"
+            id="progressBar"
+            value="0"
+            min="0"
+            max="100"
+            step="0.1"
+          />
+          <span class="time-label" id="timeTot">0:00</span>
+        </div>
+        <div class="modal-ctrl-row">
+          <button class="ctrl-btn" id="btnPrev">
+            <i class="fa-solid fa-backward-fast"></i>
+          </button>
+          <button class="ctrl-btn ctrl-main" id="btnPlay">
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <button class="ctrl-btn" id="btnNext">
+            <i class="fa-solid fa-forward-fast"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <audio id="bgAudio" preload="metadata"></audio>
+
+    <script src="./style/script/information.js"></script>
+    <script src="./style/script/script.js"></script>
+  </body>
+</html>
